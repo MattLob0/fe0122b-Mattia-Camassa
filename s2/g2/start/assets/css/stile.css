@@ -8,6 +8,25 @@ body {
     background-image: url('../img/sfondo.png');
     background-position: center center;
 }
+@media screen and (min-width:480px) {
+    body{
+        font-size: 1.9rem;
+    }
+    
+}
+@media screen and (min-width: 800px) {
+    body{
+        font-size: 2rem;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    body{
+        font-size: 4rem;
+    }
+    
+}
 
 * {box-sizing: border-box;}
 hr {display: none;} /* rimuove l'elemento */
@@ -35,12 +54,6 @@ hr {display: none;} /* rimuove l'elemento */
 .toTop .far, .social .far {
     background: white;
 }
-@media screen and (min-width:320px) {
-    .toTop .far, .social .far{
-        bottom: 1px;
-    }
-        
-    }
 
 /* HEADER */
 header {
@@ -56,6 +69,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+}
+
+@media screen and (min-width:480px) {
+    header{
+        padding: 1em 0.5em;
+    }
+    
 }
 header div img {
     margin-bottom: 20px;
@@ -124,6 +144,19 @@ h1 {
     }
     
 }
+@media screen and (min-width:480px) {
+    h1 {
+        text-align: center;
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (min-width:480px) {
+    h1 {
+        text-align: center;
+        font-size: 3.6rem;
+    }
+}
 p, address, ul, ol, dl, blockquote {
     margin-bottom: 1.2em;
 }
@@ -186,25 +219,25 @@ th, td {
 }
 @media screen and (min-width:470px){
     th, td{
-        padding: 12px 47px;
+        padding: 12px 35px;
     }
 }
 
 @media screen and (min-width:800px) {
     th, td{
-        padding: 12px 100px;
+        padding: 12px 90px;
     }
     
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:750px) {
     th, td{
-        padding: 12px 94px;
+        padding: 12px 88px;
     }
     
 }
 @media screen and (min-width:1200px) {
     th, td{
-        padding: 12px 166px;
+        padding: 12px 108px;
     }
     
 }
@@ -270,4 +303,13 @@ footer {
 }
 footer a {
     color: fuchsia;
+}
+@media print{
+    header, footer, .social .toTop, iframe, section, aside {
+        display: none
+    }
+    body{
+        font-size: 20px;
+    }
+    
 }
