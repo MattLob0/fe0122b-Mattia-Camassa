@@ -1,0 +1,23 @@
+@import 'variabili.scss';
+@import'bottone.scss';
+
+h1{
+    color: black;
+}
+
+
+body{
+    background-color: rgb(77, 137, 172);
+}
+
+
+.bott{
+    :hover{
+        color: yellow;
+    }
+}
+.mainbott{
+    :hover{
+        color: white;
+    }
+}
