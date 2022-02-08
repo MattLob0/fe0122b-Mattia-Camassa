@@ -1,0 +1,64 @@
+
+/*VARIABILI*/
+ $main-color:orange;
+
+
+
+
+
+
+
+
+
+
+
+h1, h2 {
+    color: $main-color;
+    
+}
+.warning-button, .nota{
+    background-color: $main-color;
+}
+
+
+#header {
+    background-color: #225a94b1;
+    border: 2px black solid;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#presenta {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 150px;
+    
+}
+
+.home, .nota{
+    text-decoration: none;
+    color:black
+}
+
+
+
+
+#presenta{
+    :hover{
+        color: white;
+    }
+}
+
+body{
+    text-align: center;
+    font-family:'Quintessential', cursive;
+}
+
+
+#sidebar{
+    display: flex;
+    float: right;
+    margin-top: -600px;
+}
