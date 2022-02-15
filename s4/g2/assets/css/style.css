@@ -1,0 +1,34 @@
+.content {
+    margin-left: 2px;
+}
+.tasto {
+    background-color: #a5cff3 ;
+    color: #175c97;
+    font-size: 22pt;
+    border: none;
+    margin: 4px 2px;
+    height: 40px;
+width: 46px;
+}
+.display {
+    background:none;
+    color: #175c97;
+    font-size: 24pt;
+    border: #175c97 solid 2px;
+    margin: 4px 2px;
+    width: 204px;
+    height: 40px;            
+}
+.uguale {
+    width: 208px;
+}
+.content {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    border: blue solid;
+    background-color: #a5cff3;
+    color: green;
+}

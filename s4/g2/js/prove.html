@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>S4 G2</title>
+</head>
+
+<body>
+    
+    <h2>Calcolatrice</h2>
+
+    <div class="content">
+        <input type="Text" name="display" id="operazioni" readonly="readonly" class="display">
+    </div>
+    <div class="content">
+        <div class="content">
+            <input type="submit" id="7" value="7" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="8" value="8" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="9" value="9" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="/" value="/" onclick="n(this.id)" class="tasto">
+        </div>
+
+        <div class="content">
+            <input type="button" id="4" value="4" onclick="n(this.id)" class="tasto">
+            <input type="button" id="5" value="5" onclick="n(this.id)" class="tasto">
+            <input type="button" id="6" value="6" onclick="n(this.id)" class="tasto">
+            <input type="button" id="x" value="x" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <input type="submit" id="1" value="1" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="2" value="2" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="3" value="3" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="-" value="-" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <input type="submit" value="C" onclick="cancella()" class="tasto">
+            <input type="submit" id="0" value="0" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="." value="." onclick="n(this.id)" class="tasto">
+            <input type="submit" id="+" value="+" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <button value="=" onclick="operazione()" class="uguale tasto">=</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function n(dato){
+            document.getElementById("operazioni").value+=dato;
+        }
+        function operazione(){
+            document.getElementById("operazioni").value=eval(document.getElementById("operazioni").value);
+        }
+        function cancella() {
+            document.getElementById("operazioni").value="";
+        }
+
+    
+        
+    </script>
+
+
+        <script src="../js/myscript.js"></script>
+    
+</body>
+
+</html>
