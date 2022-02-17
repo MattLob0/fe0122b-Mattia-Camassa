@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="lista"></h2>
+    <script>
+        var m = 'questa stringa è in maiuscolo'
+        var m1 = ' QUESTA STRINGA E\'\ IN MINUSCOLO'
+        var concatenata = m + m1.concat();
+        console.log(concatenata);
+
+
+        console.log(m);
+        console.log(m1);
+        console.log(m.toUpperCase());
+        console.log(m1.toLowerCase());
+        //===============///
+
+        var persone = [
+            'Mario',
+            'Marta',
+            'Giorgia',
+            'Mattia'
+        ];
+        document.getElementById('lista').innerHTML = persone.toString()
+        console.log(persone);
+
+    </script>
+    <link rel="stylesheet" href="js/script.js">
+</body>
+
+</html>
