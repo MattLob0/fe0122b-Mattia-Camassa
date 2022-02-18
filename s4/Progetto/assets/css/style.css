@@ -1,0 +1,35 @@
+
+.tasto {
+    background-color: #F0DC82;
+    color: black;
+    font-size:  25px;
+    border: 1px solid brown;
+    margin:  4px 2px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    
+    
+}
+
+.display {
+    background-color:none;
+    color: hsla(120, 29%, 33%, 0.37);
+    font-size: 50px;
+    border: brown   solid 2px;
+    margin: 4px 2px;
+    width: 284px;
+    height: 60px;
+}
+.uguale {
+    width: 284px;
+}
+.calcolatrice{
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    
+    background-color: beige;
+    color: brown;
+}
