@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="pippo1">Mese corrente: </p>
+        <p id="pippo2">Data Europea:</p>
+        <p id="pippo3">Giorno Corrente:</p>
+        <p id="pippo4">Formato Europeo </p>
+    </div>
+    
+    <div class="content">
+        <p id="orologio"></p>
+
+    </div>
+    <script>
+        //data corrente
+        var data = new Date();
+        document.write(data);
+        var estraiData = data.getMonth();
+        var estraiData2 = data.getDay();
+        document.getElementById('pippo1').innerHTML = 'Mese corrente:' + estraiData
+        var formatoEuropeo = new Date("2022-02-21");
+        document.getElementById('pippo2').innerHTML = 'Data Europea:' + formatoEuropeo
+        document.getElementById('pippo3').innerHTML = 'Giorno Corrente:' + estraiData2
+
+        document.getElementById('pippo3').innerHTML = 'Formato Europeo:' + data.toLocaleDateString();
+    </script>
+</body>
+
+</html>
