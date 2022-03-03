@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        #box {
+            width: 1px;
+            height: 100px;
+            background: green;
+            margin-top: 30px;
+            border-style: solid;
+            border-color: black;
+            position: absolute;
+            
+        }
+        #testo{
+            font-size: 30px;
+            text-align: center;
+        }
+    </Style>
+
+</head>
+
+<body>
+    <button id="clicca">Carica la progress bar </button>
+    <br>
+
+    <div id="testo"></div>
+    <br>
+    <div id="box"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $("#clicca").click(function () {
+                $("#box").animate({
+                    width: "500px"
+                }, {
+                    duration: 4000,
+                    easing: "linear",
+                    step: function(x){
+                        $("#testo").text(Math.round(x * 100 / 500)+ "%");
+                    }
+                })
+
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>
