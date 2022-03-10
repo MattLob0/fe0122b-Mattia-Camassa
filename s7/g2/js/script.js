@@ -69,6 +69,3 @@ function salva(u) {
 
 }
 //preleviamo la lista utenti nel localstorage e far mostrare nel broswer la lista utenti
-document.querySelector('#btn').addEventListener('click',function(){
-    let valore = document.querySelector()
-})

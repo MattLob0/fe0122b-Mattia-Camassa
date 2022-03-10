@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista Utenti</title>
     <style>
         h1 {
             color: red;
@@ -15,12 +15,68 @@
 </head>
 
 <body>
-    <h1>BRAVO</h1>
+    <h1>Lista Utenti</h1>
 
-    <ul id="lista"></ul>
+    <ul id="lista">
+
+    </ul>
+
+    <!--<button id="btn">clicca</button>-->
 
     <script>
-        //preleviamo la lista utenti nel localstorage e far mostrare nel broswer la lista utenti
+        /* class User {
+             constructor(n, c, e, p) {
+                 this.nome = n;
+                 this.cognome = c;
+                 this.email = e;
+                 this.password = p;
+             }
+         }*/
+
+        /*document.querySelector('#btn').addEventListener('click', function () {
+            
+             
+             let valore = document.querySelector('#lista').value
+             if (!valore)
+                 return
+ 
+             let li = document.createElement('li')
+ 
+             li.innerText = valore
+ 
+             document.querySelector('#lista').append(li)
+ 
+         })*/
+
+        let elementiSalvati = localStorage.getItem('utenti')
+        let db = elementiSalvati == null ? [] : JSON.parse(elementiSalvati)
+
+        function creaHTML() {
+
+            db.forEach(function (elemento) {
+
+                let li = document.createElement('li')
+                let cognome = document.createElement('span')
+                let nome = document.createElement('span')
+
+
+                li.append(nome,cognome)
+                document.querySelector('#lista').append(li)
+
+
+                nome.innerText =  elemento.nome;
+                cognome.innerText = elemento.cognome;
+            });
+
+        }
+        creaHTML();
+        /*var mainDiv = document.getElementById("mainDiv");
+        var img = document.createElement("img");
+        var srcAttr = document.createAttribute("src");
+        srcAttr.value = "default.png";
+        img.setAttributeNode(srcAttr);
+        mainDiv.appendChild(img);*/
+
 
     </script>
 </body>
