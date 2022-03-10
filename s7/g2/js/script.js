@@ -1,9 +1,9 @@
 class User {
-    constructor(nome, cognome, email, password) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.email = email;
-        this.password = password;
+    constructor(n, c, e, p) {
+        this.nome = n;
+        this.cognome = c;
+        this.email = e;
+        this.password = p;
     }
 }
 
@@ -11,49 +11,64 @@ class User {
 var bauMiao = document.getElementById('btn');
 
 
-    bauMiao.addEventListener('click', function (e) {
+bauMiao.addEventListener('click', function (e) {
 
-        e.preventDefault() //blocco per il reaload della pagina al click sul tasto submit
-
-
-        let nome = document.getElementById('nome').value
-        let cognome = document.getElementById('cognome').value
-        let email = document.getElementById('email').value
-        let pass = document.getElementById('password').value
+    e.preventDefault() //blocco per il reaload della pagina al click sul tasto submit
 
 
-        if (nome == '') {
-            document.querySelector('#nome ~ div ').innerHTML = 'Inserisci i dati'
 
-        } else {
-            document.querySelector('#nome ~ div ').innerHTML = ''
-            localStorage.setItem('nome', JSON.stringify(nome))
-        }
-        if (cognome == '') {
-            document.querySelector('#cognome ~ div ').innerHTML = 'Inserisci i dati'
+    //Fase 1 : Creazione variabili
+    let nome = document.getElementById('nome').value
+    let cognome = document.getElementById('cognome').value
+    let email = document.getElementById('email').value
+    let pass = document.getElementById('password').value
 
-        } else {
-            document.querySelector('#cognome ~ div ').innerHTML = ''
-            localStorage.setItem('cognome', JSON.stringify(cognome))
-        }
-        if (email == '') {
-            document.querySelector('#email ~ div ').innerHTML = 'Inserisci i dati'
+    let campi = document.querySelectorAll('input')
+    let formValido = true;
+    console.log(campi);
+
+    //Fase 2: Verifica validità dei campi
+    campi.forEach(element => {
+        if (element.value == '') {
+            formValido = false; //per validare il form
+            element.nextElementSibling.textContent = 'Inserisci i dati'
 
         } else {
-            document.querySelector('#email ~ div ').innerHTML = ''
-            localStorage.setItem('email', JSON.stringify(email))
-
+            element.nextElementSibling.textContent = ''
         }
-        if (password == '') {
-            document.querySelector('#password ~ div ').innerHTML = 'Inserisci i dati'
+    });
+    if (formValido) {
+        //FASE 3: creazione di un oggetto user tramire le variabili di cui sopra
 
-        } else {
-            document.querySelector('#password~ div ').innerHTML = ''
-            localStorage.setItem('password', JSON.stringify(pass))
-        }
-    })
+        let utente = new User(nome, cognome, email, pass)
+        console.log(utente)
+
+        //FASE 4: salvataggio  dell oggetto di cui fase 3
+
+        salva(utente);
+        location.href = "pagina1.html"
+
+    }
+});
 
 
 
 
-//esercizio 1 nel form se le validazini vanno a buon fine, utilizza la classe user appena creata per creare un utente con i dati presenti nel form
+
+function salva(u) {
+
+    let elementiSalvati = localStorage.getItem('utenti')
+    console.log(elementiSalvati)
+    let db = elementiSalvati == null ? [] : JSON.parse(elementiSalvati);
+    console.log(db)
+    db.push(u)
+
+    localStorage.setItem('utenti', JSON.stringify(db))
+
+
+
+}
+//preleviamo la lista utenti nel localstorage e far mostrare nel broswer la lista utenti
+document.querySelector('#btn').addEventListener('click',function(){
+    let valore = document.querySelector()
+})
