@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    
+    <table class="table">
+      
+      </table>
+
+    <script>
+
+        fetch('https://sofin.wp-admin.it/public/api/v1/user')
+            .then(res => res.json())
+            .then(res => {
+                console.log(res)
+                let table = document.createElement('table');
+                    table.classList.add('table')
+                    let thead = document.createElement('thead');
+                    let tbody = document.createElement('tbody');
+                    let row1 = document.createElement('tr');
+                    let heading1 = document.createElement('th');
+                    heading1.innerHTML = "Nome";
+                    let heading2 = document.createElement('th');
+                    heading2.innerHTML = "Cognome";
+                    let heading3 = document.createElement('th');
+                    heading3.innerHTML = "Email";
+                    
+                    row1.append(heading1, heading2, heading3);
+                    thead.append(row1);
+
+                  
+
+
+                res.forEach(utenti => {
+
+                    let row2 = document.createElement('tr');
+                    let row2Data1 = document.createElement('td');
+                    row2Data1.innerHTML = utenti.name;
+                    let row2Data2 = document.createElement('td');
+                    row2Data2.innerHTML = utenti.lastname;
+                    let row2Data3 = document.createElement('td');
+                    row2Data3.innerHTML = utenti.email;
+
+                    
+                   
+
+                    row2.append(row2Data1, row2Data2, row2Data3);
+                    tbody.append(row2);
+
+                  
+                    
+                });
+                table.append(thead,tbody);
+                document.querySelector('body').append(table);
+            });
+
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
