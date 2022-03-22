@@ -1,0 +1,24 @@
+.navbar {
+    background: rgb(255, 2, 2);
+    background: linear-gradient(90deg, rgba(50, 209, 17, 1) 1%, rgba(255, 255, 255, 1) 45%, rgba(255, 2, 2, 1) 100%);
+    height: 100px;
+    
+}
+.d-flex{
+    width: 80px;
+}
+.cont{
+    display:block;
+    margin: 60px;
+    margin-left: 40%;
+}
+
+.cont2{
+    background: rgb(255, 2, 2);
+    background: linear-gradient(90deg, rgba(50, 209, 17, 1) 1%, rgba(255, 255, 255, 1) 45%, rgba(255, 2, 2, 1) 100%);
+    height: 100px;
+    margin-top: 89px;
+    height: 30px;
+    
+    
+}
